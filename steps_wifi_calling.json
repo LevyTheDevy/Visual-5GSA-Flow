@@ -1,0 +1,25 @@
+{
+    "nodes": [
+        {"id": "UE", "label": "User Equipment", "color": "#FF5733"},
+        {"id": "ePDG", "label": "ePDG", "color": "#006e13"},
+        {"id": "AAA", "label": "AAA Server", "color": "#3357FF"},
+        {"id": "IMS", "label": "IMS Core", "color": "#FF33A6"},
+        {"id": "HSS", "label": "HSS", "color": "#33FFF5"}
+    ],
+    "steps": [
+        {"source": "UE", "target": "ePDG", "label": "IKEv2 Initiation", "color": "#FF5733"},
+        {"source": "ePDG", "target": "AAA", "label": "EAP Authentication Request", "color": "#006e13"},
+        {"source": "AAA", "target": "HSS", "label": "Authentication Data Request", "color": "#3357FF"},
+        {"source": "HSS", "target": "AAA", "label": "Authentication Data Response", "color": "#FF33A6"},
+        {"source": "AAA", "target": "ePDG", "label": "EAP Authentication Response", "color": "#006e13"},
+        {"source": "ePDG", "target": "UE", "label": "IKEv2 Response", "color": "#FF5733"},
+        {"source": "UE", "target": "ePDG", "label": "IKEv2 Authentication", "color": "#FF5733"},
+        {"source": "ePDG", "target": "AAA", "label": "EAP Success", "color": "#006e13"},
+        {"source": "AAA", "target": "ePDG", "label": "EAP Success Response", "color": "#3357FF"},
+        {"source": "ePDG", "target": "UE", "label": "IKEv2 Authentication Complete", "color": "#FF5733"},
+        {"source": "UE", "target": "IMS", "label": "SIP REGISTER", "color": "#33FFF5"},
+        {"source": "IMS", "target": "HSS", "label": "Cx Query", "color": "#FF33A6"},
+        {"source": "HSS", "target": "IMS", "label": "Cx Response", "color": "#33FFF5"},
+        {"source": "IMS", "target": "UE", "label": "SIP 200 OK", "color": "#FF33A6"}
+    ]
+}

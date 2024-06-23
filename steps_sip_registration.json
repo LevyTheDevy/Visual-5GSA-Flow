@@ -1,0 +1,17 @@
+{
+    "nodes": [
+        {"id": "UE", "label": "User Equipment", "color": "#FF5733"},
+        {"id": "Proxy", "label": "Proxy Server", "color": "#006e13"},
+        {"id": "Registrar", "label": "Registrar Server", "color": "#3357FF"}
+    ],
+    "steps": [
+        {"source": "UE", "target": "Proxy", "label": "REGISTER", "color": "#FF5733"},
+        {"source": "Proxy", "target": "Registrar", "label": "REGISTER", "color": "#006e13"},
+        {"source": "Registrar", "target": "Proxy", "label": "401 Unauthorized", "color": "#3357FF"},
+        {"source": "Proxy", "target": "UE", "label": "401 Unauthorized", "color": "#006e13"},
+        {"source": "UE", "target": "Proxy", "label": "REGISTER with Authentication", "color": "#FF5733"},
+        {"source": "Proxy", "target": "Registrar", "label": "REGISTER with Authentication", "color": "#006e13"},
+        {"source": "Registrar", "target": "Proxy", "label": "200 OK", "color": "#3357FF"},
+        {"source": "Proxy", "target": "UE", "label": "200 OK", "color": "#006e13"}
+    ]
+}

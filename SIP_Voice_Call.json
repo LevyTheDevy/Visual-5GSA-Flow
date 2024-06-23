@@ -1,0 +1,19 @@
+{
+    "nodes": [
+        {"id": "UserA", "label": "User A", "color": "#FF5733"},
+        {"id": "UserB", "label": "User B", "color": "#006e13"},
+        {"id": "Proxy", "label": "Proxy Server", "color": "#3357FF"}
+    ],
+    "steps": [
+        {"source": "UserA", "target": "Proxy", "label": "INVITE", "color": "#FF5733"},
+        {"source": "Proxy", "target": "UserB", "label": "INVITE", "color": "#3357FF"},
+        {"source": "UserB", "target": "Proxy", "label": "100 Trying", "color": "#006e13"},
+        {"source": "Proxy", "target": "UserA", "label": "100 Trying", "color": "#3357FF"},
+        {"source": "UserB", "target": "Proxy", "label": "180 Ringing", "color": "#006e13"},
+        {"source": "Proxy", "target": "UserA", "label": "180 Ringing", "color": "#3357FF"},
+        {"source": "UserB", "target": "Proxy", "label": "200 OK", "color": "#006e13"},
+        {"source": "Proxy", "target": "UserA", "label": "200 OK", "color": "#3357FF"},
+        {"source": "UserA", "target": "Proxy", "label": "ACK", "color": "#FF5733"},
+        {"source": "Proxy", "target": "UserB", "label": "ACK", "color": "#3357FF"}
+    ]
+}

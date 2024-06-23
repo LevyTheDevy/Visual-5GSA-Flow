@@ -1,0 +1,13 @@
+{
+    "nodes": [
+        {"id": "UE", "label": "User Equipment", "color": "#FF5733"},
+        {"id": "gNB", "label": "gNodeB", "color": "#006e13"},
+        {"id": "AMF", "label": "AMF", "color": "#3357FF"}
+    ],
+    "steps": [
+        {"source": "AMF", "target": "gNB", "label": "UE Context Release Command", "color": "#3357FF"},
+        {"source": "gNB", "target": "UE", "label": "RRC Connection Release", "color": "#006e13"},
+        {"source": "UE", "target": "gNB", "label": "RRC Connection Release Complete", "color": "#FF5733"},
+        {"source": "gNB", "target": "AMF", "label": "UE Context Release Complete", "color": "#006e13"}
+    ]
+}

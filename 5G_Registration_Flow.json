@@ -1,0 +1,27 @@
+{
+    "nodes": [
+        {"id": "UE", "label": "UE", "color": "#FF5733"},
+        {"id": "gNB", "label": "gNodeB", "color": "#006e13"},
+        {"id": "AMF", "label": "AMF", "color": "#3357FF"},
+        {"id": "SMF", "label": "SMF", "color": "#FF33A6"}
+    ],
+    "steps": [
+        {"source": "UE", "target": "gNB", "label": "RRC Connection Request", "color": "#FF5733"},
+        {"source": "gNB", "target": "UE", "label": "RRC Connection Setup", "color": "#006e13"},
+        {"source": "UE", "target": "gNB", "label": "RRC Connection Setup Complete / NAS Registration Request", "color": "#FF5733"},
+        {"source": "gNB", "target": "AMF", "label": "NAS Registration Request", "color": "#006e13"},
+        {"source": "AMF", "target": "UE", "label": "Authentication Request", "color": "#3357FF"},
+        {"source": "UE", "target": "AMF", "label": "Authentication Response", "color": "#FF5733"},
+        {"source": "AMF", "target": "UE", "label": "Authentication Result", "color": "#3357FF"},
+        {"source": "AMF", "target": "UE", "label": "Security Mode Command", "color": "#3357FF"},
+        {"source": "UE", "target": "AMF", "label": "Security Mode Complete", "color": "#FF5733"},
+        {"source": "AMF", "target": "UE", "label": "Registration Accept", "color": "#3357FF"},
+        {"source": "UE", "target": "AMF", "label": "Registration Complete", "color": "#FF5733"},
+        {"source": "UE", "target": "AMF", "label": "PDU Session Establishment Request", "color": "#FF5733"},
+        {"source": "AMF", "target": "SMF", "label": "PDU Session Setup", "color": "#3357FF"},
+        {"source": "SMF", "target": "AMF", "label": "PDU Session Setup Response", "color": "#FF33A6"},
+        {"source": "AMF", "target": "UE", "label": "PDU Session Establishment Accept", "color": "#3357FF"},
+        {"source": "gNB", "target": "UE", "label": "RRC Reconfiguration", "color": "#006e13"},
+        {"source": "UE", "target": "gNB", "label": "RRC Reconfiguration Complete", "color": "#FF5733"}
+    ]
+}

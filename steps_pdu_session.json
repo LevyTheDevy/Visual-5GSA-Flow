@@ -1,0 +1,19 @@
+{
+    "nodes": [
+        {"id": "UE", "label": "UE", "color": "#FF5733"},
+        {"id": "gNB", "label": "gNodeB", "color": "#006e13"},
+        {"id": "AMF", "label": "AMF", "color": "#3357FF"},
+        {"id": "SMF", "label": "SMF", "color": "#FF33A6"},
+        {"id": "UPF", "label": "UPF", "color": "#33FFF5"}
+    ],
+    "steps": [
+        {"source": "UE", "target": "gNB", "label": "PDU Session Request", "color": "#FF5733"},
+        {"source": "gNB", "target": "AMF", "label": "PDU Session Request", "color": "#006e13"},
+        {"source": "AMF", "target": "SMF", "label": "PDU Session Create", "color": "#3357FF"},
+        {"source": "SMF", "target": "UPF", "label": "Create Session in UPF", "color": "#FF33A6"},
+        {"source": "UPF", "target": "SMF", "label": "Session Response", "color": "#33FFF5"},
+        {"source": "SMF", "target": "AMF", "label": "PDU Session Accept", "color": "#FF33A6"},
+        {"source": "AMF", "target": "gNB", "label": "PDU Session Accept", "color": "#3357FF"},
+        {"source": "gNB", "target": "UE", "label": "PDU Session Accept", "color": "#006e13"}
+    ]
+}

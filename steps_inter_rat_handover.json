@@ -1,0 +1,23 @@
+{
+    "nodes": [
+        {"id": "UE", "label": "User Equipment", "color": "#FF5733"},
+        {"id": "gNB", "label": "5G gNodeB", "color": "#006e13"},
+        {"id": "MME", "label": "4G MME", "color": "#3357FF"},
+        {"id": "eNB", "label": "4G eNodeB", "color": "#FF33A6"},
+        {"id": "AMF", "label": "5G AMF", "color": "#33FFF5"}
+    ],
+    "steps": [
+        {"source": "UE", "target": "gNB", "label": "Measurement Report", "color": "#FF5733"},
+        {"source": "gNB", "target": "AMF", "label": "Handover Required", "color": "#006e13"},
+        {"source": "AMF", "target": "MME", "label": "Forward Relocation Request", "color": "#3357FF"},
+        {"source": "MME", "target": "eNB", "label": "Handover Request", "color": "#FF33A6"},
+        {"source": "eNB", "target": "MME", "label": "Handover Request Acknowledge", "color": "#33FFF5"},
+        {"source": "MME", "target": "AMF", "label": "Forward Relocation Response", "color": "#3357FF"},
+        {"source": "AMF", "target": "gNB", "label": "Handover Command", "color": "#006e13"},
+        {"source": "gNB", "target": "UE", "label": "RRC Connection Reconfiguration (Handover Command)", "color": "#FF5733"},
+        {"source": "UE", "target": "eNB", "label": "RRC Connection Reconfiguration Complete", "color": "#FF33A6"},
+        {"source": "eNB", "target": "MME", "label": "Handover Notify", "color": "#33FFF5"},
+        {"source": "MME", "target": "AMF", "label": "Handover Notify", "color": "#3357FF"},
+        {"source": "AMF", "target": "gNB", "label": "Release Resources", "color": "#006e13"}
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "nodes": [
+        {"id": "UE", "label": "UE", "color": "#FF5733"},
+        {"id": "Source_gNB", "label": "Source gNodeB", "color": "#006e13"},
+        {"id": "Target_gNB", "label": "Target gNodeB", "color": "#3357FF"},
+        {"id": "AMF", "label": "AMF", "color": "#FF33A6"}
+    ],
+    "steps": [
+        {"source": "UE", "target": "Source_gNB", "label": "Measurement Report", "color": "#FF5733"},
+        {"source": "Source_gNB", "target": "AMF", "label": "Handover Required", "color": "#006e13"},
+        {"source": "AMF", "target": "Target_gNB", "label": "Handover Request", "color": "#3357FF"},
+        {"source": "Target_gNB", "target": "AMF", "label": "Handover Request Acknowledge", "color": "#FF33A6"},
+        {"source": "AMF", "target": "Source_gNB", "label": "Handover Command", "color": "#006e13"},
+        {"source": "Source_gNB", "target": "UE", "label": "Handover Command", "color": "#FF5733"},
+        {"source": "UE", "target": "Target_gNB", "label": "Handover Confirm", "color": "#3357FF"},
+        {"source": "Target_gNB", "target": "AMF", "label": "Handover Complete", "color": "#FF33A6"}
+    ]
+}

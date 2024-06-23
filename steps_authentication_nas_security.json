@@ -1,0 +1,21 @@
+{
+    "nodes": [
+        {"id": "UE", "label": "User Equipment", "color": "#FF5733"},
+        {"id": "gNB", "label": "gNodeB", "color": "#006e13"},
+        {"id": "AMF", "label": "AMF", "color": "#3357FF"},
+        {"id": "AUSF", "label": "AUSF", "color": "#FF33A6"},
+        {"id": "UDM", "label": "UDM", "color": "#33FFF5"}
+    ],
+    "steps": [
+        {"source": "UE", "target": "gNB", "label": "RRC Connection Request", "color": "#FF5733"},
+        {"source": "gNB", "target": "AMF", "label": "Initial NAS Message", "color": "#006e13"},
+        {"source": "AMF", "target": "AUSF", "label": "Authentication Request", "color": "#3357FF"},
+        {"source": "AUSF", "target": "UDM", "label": "Authentication Data Request", "color": "#FF33A6"},
+        {"source": "UDM", "target": "AUSF", "label": "Authentication Data Response", "color": "#33FFF5"},
+        {"source": "AUSF", "target": "AMF", "label": "Authentication Response", "color": "#FF33A6"},
+        {"source": "AMF", "target": "UE", "label": "Authentication Command", "color": "#3357FF"},
+        {"source": "UE", "target": "AMF", "label": "Authentication Complete", "color": "#FF5733"},
+        {"source": "AMF", "target": "UE", "label": "NAS Security Mode Command", "color": "#3357FF"},
+        {"source": "UE", "target": "AMF", "label": "NAS Security Mode Complete", "color": "#FF5733"}
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "nodes": [
+        {"id": "UE", "label": "User Equipment", "color": "#FF5733"},
+        {"id": "gNB", "label": "gNodeB", "color": "#006e13"}
+    ],
+    "steps": [
+        {"source": "UE", "target": "gNB", "label": "RRC Connection Request", "color": "#FF5733"},
+        {"source": "gNB", "target": "UE", "label": "RRC Connection Setup", "color": "#006e13"},
+        {"source": "UE", "target": "gNB", "label": "RRC Connection Setup Complete", "color": "#FF5733"}
+    ]
+}

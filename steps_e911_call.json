@@ -1,0 +1,23 @@
+{
+    "nodes": [
+        {"id": "UE", "label": "User Equipment", "color": "#FF5733"},
+        {"id": "eNodeB", "label": "eNodeB", "color": "#006e13"},
+        {"id": "MME", "label": "MME", "color": "#3357FF"},
+        {"id": "GMLC", "label": "GMLC", "color": "#FF33A6"},
+        {"id": "E-CSCF", "label": "E-CSCF", "color": "#33FFF5"},
+        {"id": "PSAP", "label": "PSAP", "color": "#FF5733"}
+    ],
+    "steps": [
+        {"source": "UE", "target": "eNodeB", "label": "RRC Connection Request", "color": "#FF5733"},
+        {"source": "eNodeB", "target": "MME", "label": "Initial UE Message", "color": "#006e13"},
+        {"source": "MME", "target": "GMLC", "label": "Location Request", "color": "#3357FF"},
+        {"source": "GMLC", "target": "MME", "label": "Location Response", "color": "#FF33A6"},
+        {"source": "MME", "target": "eNodeB", "label": "RRC Connection Setup", "color": "#33FFF5"},
+        {"source": "eNodeB", "target": "UE", "label": "RRC Connection Setup Complete", "color": "#FF5733"},
+        {"source": "UE", "target": "E-CSCF", "label": "SIP INVITE", "color": "#006e13"},
+        {"source": "E-CSCF", "target": "PSAP", "label": "SIP INVITE", "color": "#3357FF"},
+        {"source": "PSAP", "target": "E-CSCF", "label": "SIP 200 OK", "color": "#FF33A6"},
+        {"source": "E-CSCF", "target": "UE", "label": "SIP 200 OK", "color": "#33FFF5"},
+        {"source": "UE", "target": "PSAP", "label": "SIP ACK", "color": "#FF5733"}
+    ]
+}

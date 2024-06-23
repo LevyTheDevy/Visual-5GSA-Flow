@@ -1,0 +1,18 @@
+{
+    "nodes": [
+        {"id": "UE", "label": "User Equipment", "color": "#FF5733"},
+        {"id": "gNB", "label": "gNodeB", "color": "#006e13"},
+        {"id": "AMF", "label": "AMF", "color": "#3357FF"},
+        {"id": "UPF", "label": "UPF", "color": "#FF33A6"},
+        {"id": "PCF", "label": "PCF", "color": "#33FFF5"}
+    ],
+    "steps": [
+        {"source": "UE", "target": "gNB", "label": "Deregistration Request", "color": "#FF5733"},
+        {"source": "gNB", "target": "AMF", "label": "Deregistration Request", "color": "#006e13"},
+        {"source": "AMF", "target": "UPF", "label": "Release Session", "color": "#3357FF"},
+        {"source": "AMF", "target": "PCF", "label": "Policy Release Request", "color": "#FF33A6"},
+        {"source": "PCF", "target": "AMF", "label": "Policy Release Response", "color": "#33FFF5"},
+        {"source": "AMF", "target": "gNB", "label": "Deregistration Accept", "color": "#3357FF"},
+        {"source": "gNB", "target": "UE", "label": "Deregistration Accept", "color": "#006e13"}
+    ]
+}
